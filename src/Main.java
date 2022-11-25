@@ -17,15 +17,9 @@ public class Main extends JFrame {
         file.add(load);
         mb.add(file);
         mb.add(help);
-
-
         LeftPanel lp = new LeftPanel();
-        RightPanel rp = new RightPanel();
-        //rp.getRightPanel();
-        //RightPanel rp = RightPanel.getRightPanel();
-
-
-        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, lp, rp.getRightPanel());
+        RightPanel rp = RightPanel.getRightPanel();
+        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, lp, rp);
         rp.addSubscriber(lp);
         split.setDividerLocation(500);
         frame.getContentPane().add(split);
